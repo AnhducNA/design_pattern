@@ -1,0 +1,18 @@
+{
+    "name": "anhduc/design-pattern",
+    "description": "design-pattern",
+    "autoload": {
+        "psr-4": {
+            "Anhduc\\DesignPattern\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "anhduc"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "larapack/dd": "^1.1"
+    }
+}
