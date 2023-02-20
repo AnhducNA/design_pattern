@@ -1,8 +1,8 @@
 <?php
 
-namespace Anhduc\DesignPattern\FactoryMethod;
+namespace Anhduc\DesignPattern\FactoryMethodShape;
 
-use Anhduc\DesignPattern\FactoryMethod\interface\Shape;
+use Anhduc\DesignPattern\FactoryMethodShape\interface\Shape;
 
 class ShapeFactory
 {
