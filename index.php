@@ -82,7 +82,26 @@ require 'vendor/autoload.php';
 //$singletonInstance = \Anhduc\DesignPattern\Singleton\Singleton::getInstance();
 //var_dump($singletonInstance);
 
-$subject = new \Anhduc\DesignPattern\Observer\Subject();
-$observer = new \Anhduc\DesignPattern\Observer\ConcreteObserver($subject);
+// Observer pattern
+//$subject = new \Anhduc\DesignPattern\Observer\Subject();
+//$observer = new \Anhduc\DesignPattern\Observer\ConcreteObserver($subject);
+//
+//$subject->setState('ready');
 
-$subject->setState('ready');
+// ObserverWeather pattern
+function observerWeather_pattern(){
+    $weatherStation = new \Anhduc\DesignPattern\ObserverWeather\WeatherStation();
+
+    $phoneDisplay = new \Anhduc\DesignPattern\ObserverWeather\PhoneDisplay();
+    $televisionDisplay = new \Anhduc\DesignPattern\ObserverWeather\TelevisionDisplay();
+
+    $weatherStation->attach($phoneDisplay);
+
+    $weatherStation->attach($televisionDisplay);
+    $weatherStation->setTemperature(25);
+
+    $weatherStation->detach($phoneDisplay);
+
+    $weatherStation->setTemperature(30);
+}
+//observerWeather_pattern();

@@ -18,6 +18,6 @@ class ConcreteObserver implements Observer
 
     public function update()
     {
-        echo 'The subject has updated its state to: ' . $this->subject->getState();
+        echo 'Subject được update có trạng thái là: ' . $this->subject->getState();
     }
 }
